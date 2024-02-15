@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import aboutImage from './assets/image 54.png'
 import Navbar from './Navbar'
 import Footer from './Footer'
+import { Link, useNavigate } from 'react-router-dom'
 const About = () => {
+  const navigate = useNavigate()
+
   return (
     <>
       <Navbar />
@@ -19,7 +22,7 @@ const About = () => {
           <div>
           <p className='text-4xl '>Your destination is waiting.
 Your van is ready.</p>
-<button type="button" className="text-white bg-black border border-black focus:outline-none hover:bg-black focus:ring-4 focus:ring-gray-900 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-900 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:black-gray-600 dark:focus:ring-gray-700">Explore our vans</button>
+<Link to="/van" type="button" className="text-white bg-black border border-black focus:outline-none hover:bg-black focus:ring-4 focus:ring-gray-900 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-900 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:black-gray-600 dark:focus:ring-gray-700">Explore our vans</Link>
 
           </div>
         </div>

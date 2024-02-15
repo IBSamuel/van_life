@@ -6,6 +6,15 @@ import About from './About';
 import Vans from './Vans';
 import Signin from './Signin';
 import RentVan from './RentVan';
+import Signup from './Signup';
+import Host from './host';
+import Reviews from './Host/Reviews';
+import Van from './Host/Van';
+import Vanone from './host/VanOne';
+import Vantwo from './host/VanTwo';
+import Dashboard from './Host/Dashboard';
+import Income from './Host/Income';
+import Vanthree from './host/Vanthree';
 
 
 const App = () => {
@@ -16,12 +25,21 @@ const App = () => {
 
 
         <Routes>
-          <Route path="/nav" element={<Navbar />} />
+          <Route path="/" element={<Homehero/>} />
           <Route path="/card" element={<Homehero/>} />
-          <Route path="/van" element={<Vans/>} />
           <Route path="/about" element={<About/>} />
           <Route path="/signin" element={<Signin/>} />
-          <Route path="/vans" element={<RentVan/>} />
+          <Route path="/signup" element={<Signup/>} />
+          <Route path="/vans/:id" element={<RentVan/>} />
+          <Route path="/van" element={<Vans/>} />
+          <Route path="/income" element={<Income/>} />
+          <Route path="/dashboard" element={<Dashboard/>} />
+          <Route path="/host" element={<Host/>} />
+          <Route path="/reviews" element={<Reviews/>} />
+          <Route path="/vanstwo" element={<Van/>} />
+          <Route path="/vanstwo/va1/:id" element={<Vanone/>} />
+          <Route path="/vanstwo/va2/:id" element={<Vantwo/>} />
+          <Route path="/vanstwo/va3/:id" element={<Vanthree/>} />
           <Route path="*" element={<Error404 />} />
         </Routes>
     </div>

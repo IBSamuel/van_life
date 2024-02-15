@@ -1,6 +1,17 @@
 import React from 'react'
+import { Link, useNavigate } from 'react-router-dom';
 
 const CustomNavbar = () => {
+  const navigate = useNavigate()
+  const host = ()=>{
+    if(localStorage['accountDetails']){
+      navigate('/dashboard')
+    }
+    else{
+      alert('Kindly Signup')
+
+    }
+  }
   return (
     <>
       <nav className="bg-color-300 border-gray-200 dark:bg-gray-900 sticky top-0 ">
@@ -17,10 +28,16 @@ const CustomNavbar = () => {
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-color-100 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-color-300 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
               <li>
-                <a href="#" className="block py-2 px-3 text-xl text-gray-500 rounded hover:underline hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-black md:p-0 dark:text-white md:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+                <a href="#" onClick={host} className="block py-2 px-3 text-xl text-gray-500 rounded hover:underline hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-black md:p-0 dark:text-white md:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Host</a>
               </li>
               <li>
-                <a href="#" className="block py-2 px-3 text-xl text-gray-500 rounded hover:underline hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-black md:p-0 dark:text-white md:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Vans</a>
+                <Link to="/about" className="block py-2 px-3 text-xl text-gray-500 rounded hover:underline hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-black md:p-0 dark:text-white md:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</Link>
+              </li>
+              <li>
+                <Link to="/van" className="block py-2 px-3 text-xl text-gray-500 rounded hover:underline hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-black md:p-0 dark:text-white md:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Vans</Link>
+              </li>
+              <li>
+                <Link to="/signin" className="block py-2 px-3 text-xl text-gray-500 rounded hover:underline hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-black md:p-0 dark:text-white md:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"><i className="bi bi-person-circle"></i></Link>
               </li>
             </ul>
           </div>
