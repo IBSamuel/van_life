@@ -37,7 +37,7 @@ const Signin = () => {
                     <input name='password' value={formik.values.password} onChange={formik.handleChange} type="password" className="block w-full text-sm text-gray-900 border border-gray-300 rounded-b-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Password" /> {/* Changed type to "password" */}
                     <br />
                     <br />
-                    <button type="submit" className="w-full text-white bg-amber-600  hover:bg-amber-700 focus:ring-2 focus:ring-amber-400 font-medium rounded-lg  text-sm  py-2.5 me-4 mb-4 px-20  focus:outline-none dark:focus:ring-blue-800">Find your van</button>
+                    <button type="submit" className="w-full text-white bg-amber-600  hover:bg-amber-700 focus:ring-2 focus:ring-amber-400 font-medium rounded-lg  text-sm  py-2.5 me-4 mb-4 px-20  focus:outline-none dark:focus:ring-blue-800">Sign In</button>
                     <p className='text-center'>Don’t have an account? <Link to="/signup" className='text-color-100 text-xl'>Create one now</Link></p>
                 </div>
             </form>
