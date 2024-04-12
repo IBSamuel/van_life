@@ -10,7 +10,7 @@ const Vans = () => {
     const [vanp, setVanp] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:3000/api/vans')
+        axios.get('https://van-life-sever.onrender.com/api/vans')
             .then((response) => {
                 setVanp(response.data);
                 setVans(response.data);

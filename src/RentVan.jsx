@@ -10,7 +10,7 @@ const RentVan = () => {
     const [info, setInfo] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:3000/api/vans')
+        axios.get('https://van-life-sever.onrender.com/api/vans')
             .then((response) => {
                 setVans(response.data);
             })

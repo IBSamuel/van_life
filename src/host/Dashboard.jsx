@@ -1,14 +1,24 @@
-import React, { useEffect } from 'react'
-import MenueHost from '../Menuhost'
-import CustomNavbar from '../Navbar'
-import Footer from '../Footer'
+import React, { useEffect, useState } from 'react';
+import MenueHost from '../Menuhost';
+import CustomNavbar from '../Navbar';
+import Footer from '../Footer';
 
 const Dashboard = () => {
-    let fechedData =  JSON.parse(localStorage.getItem('allVans'))
+    const [vans, setVans] = useState([]);
+    const [showAll, setShowAll] = useState(false);
 
-    
+    useEffect(() => {
+        const fechedData = JSON.parse(localStorage.getItem('allVans'));
+        setVans(fechedData);
+    }, []);
+
+    const handleViewAll = () => {
+        setShowAll(true);
+    };
+
     return (
-        <><CustomNavbar />
+        <>
+            <CustomNavbar />
             <MenueHost />
 
             <div className='bg-color-200 p-10'>
@@ -29,42 +39,42 @@ const Dashboard = () => {
             <div className="w-full me-10 p-4 rounded-lg shadow sm:p-8">
                 <div className="flex items-center justify-between mb-4">
                     <h5 className="text-xl font-bold leading-none text-gray-900 dark:text-white">Your listed vans</h5>
-                    <a href="#" className="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
-                        View all
-                    </a>
+                    {!showAll && (
+                        <button onClick={handleViewAll} className="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
+                            View all
+                        </button>
+                    )}
                 </div>
                 <div className="flow-root">
                     <ul role="list" className="">
-                    {fechedData.map((item, index) => (
-    <li key={index} className="py-3 sm:py-4 ">
-        {console.log(item.imageUrl)}
-        <div className="flex items-center bg-white p-4 rounded-lg">
-            <div className="flex-shrink-0">
-                <img className="w-8 h-8" src={item.imageUrl} alt="Van image" />
-            </div>
-            <div className="flex-1 min-w-0 ms-4">
-                <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
-                    {item.name}
-                </p>
-                <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                    {item.price} <span>/day</span>
-                </p>
-            </div>
-            <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                Edit
-            </div>
-        </div>
-    </li>
-))}
-
-
+                        {vans.slice(0, showAll ? vans.length : 4).map((item, index) => (
+                            <li key={index} className="py-3 sm:py-4 ">
+                                {console.log(item.imageUrl)}
+                                <div className="flex items-center bg-white p-4 rounded-lg">
+                                    <div className="flex-shrink-0">
+                                        <img className="w-8 h-8" src={item.imageUrl} alt="Van image" />
+                                    </div>
+                                    <div className="flex-1 min-w-0 ms-4">
+                                        <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                            {item.name}
+                                        </p>
+                                        <p className="text-sm text-gray-500 truncate dark:text-gray-400">
+                                            {item.price} <span>/day</span>
+                                        </p>
+                                    </div>
+                                    <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                        Edit
+                                    </div>
+                                </div>
+                            </li>
+                        ))}
                     </ul>
                 </div>
             </div>
 
             <Footer />
         </>
-    )
+    );
 }
 
-export default Dashboard
+export default Dashboard;

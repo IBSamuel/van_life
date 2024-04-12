@@ -21,7 +21,7 @@ const MenueHost = () => {
             <Link to="/vanstwo" className="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">Vans</Link>
         </li>
         <li>
-            <Link to="/reviews" className="inline-block p-4 text-gray-400 rounded-t-lg cursor-not-allowed dark:text-gray-500">Reviews</Link>
+            <Link to="/reviews" className="inline-block p-4 text-gray-400 rounded-t-lg dark:text-gray-500">Reviews</Link>
         </li>
     </ul>
 </div>
