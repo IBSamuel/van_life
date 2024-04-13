@@ -8,13 +8,13 @@ import Signin from './Signin';
 import RentVan from './RentVan';
 import Signup from './Signup';
 import Host from './host';
-import Reviews from './Host/Reviews';
-import Van from './Host/Van';
+import Reviews from './host/Reviews';
+import Van from './host/Van';
 import Vanone from './host/VanOne';
 import Vantwo from './host/VanTwo';
-import Dashboard from './Host/Dashboard';
-import Income from './Host/Income';
+import Income from './host/Income';
 import Vanthree from './host/Vanthree';
+import Dashboard from './Host/Dashboard';
 
 
 const App = () => {
