@@ -7,7 +7,7 @@ import Vans from './Vans';
 import Signin from './Signin';
 import RentVan from './RentVan';
 import Signup from './Signup';
-import Host from './host';
+import Host from './Host';
 import Reviews from './host/Reviews';
 import Van from './host/Van';
 import Vanone from './host/VanOne';
