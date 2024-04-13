@@ -10,12 +10,12 @@ import Signup from './Signup';
 import Host from './Host';
 import Reviews from './host/Reviews';
 import Van from './host/Van';
-import Vanone from './host/VanOne';
+import Vanone from './host/Vanone';
 // import Dashboard from './host/Dashboard';
 import Income from './host/Income';
 import Vanthree from './host/Vanthree';
 import UserDashboard from './host/UserDashboard';
-import Vantwo from './host/VanTwo';
+import Vantwo from './host/Vantwo';
 
 
 const App = () => {
