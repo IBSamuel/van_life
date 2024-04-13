@@ -12,9 +12,10 @@ import Reviews from './host/Reviews';
 import Van from './host/Van';
 import Vanone from './host/VanOne';
 import Vantwo from './host/VanTwo';
+// import Dashboard from './host/Dashboard';
 import Income from './host/Income';
 import Vanthree from './host/Vanthree';
-import Dashboard from './Host/Dashboard';
+import UserDashboard from './host/UserDashboard';
 
 
 const App = () => {
@@ -33,7 +34,7 @@ const App = () => {
           <Route path="/vans/:id" element={<RentVan/>} />
           <Route path="/van" element={<Vans/>} />
           <Route path="/income" element={<Income/>} />
-          <Route path="/dashboard" element={<Dashboard/>} />
+          <Route path="/dashboard" element={<UserDashboard/>} />
           <Route path="/host" element={<Host/>} />
           <Route path="/reviews" element={<Reviews/>} />
           <Route path="/vanstwo" element={<Van/>} />

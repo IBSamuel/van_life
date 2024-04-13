@@ -3,7 +3,7 @@ import MenueHost from '../Menuhost';
 import CustomNavbar from '../Navbar';
 import Footer from '../Footer';
 
-const Dashboard = () => {
+const UserDashboard = () => {
     const [vans, setVans] = useState([]);
     const [showAll, setShowAll] = useState(false);
 
@@ -77,4 +77,4 @@ const Dashboard = () => {
     );
 }
 
-export default Dashboard;
+export default UserDashboard;

@@ -1,10 +1,12 @@
 import React from 'react'
-import Dashboard from './Host/Dashboard'
+
+import UserDashboard from './host/UserDashboard'
+
 
 const host = () => {
   return (
     <>
-        <Dashboard/>
+        <UserDashboard/>
     </>
   )
 }
