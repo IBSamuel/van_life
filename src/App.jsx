@@ -11,11 +11,11 @@ import Host from './Host';
 import Reviews from './host/Reviews';
 import Van from './host/Van';
 import Vanone from './host/VanOne';
-import Vantwo from './host/VanTwo';
 // import Dashboard from './host/Dashboard';
 import Income from './host/Income';
 import Vanthree from './host/Vanthree';
 import UserDashboard from './host/UserDashboard';
+import Vantwo from './host/VanTwo';
 
 
 const App = () => {
