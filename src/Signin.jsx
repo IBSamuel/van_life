@@ -15,7 +15,7 @@ const Signin = () => {
             password: ''
         },
         onSubmit: (values) => {
-            axios.post('http://van-life-sever.onrender.com/check', values)
+            axios.post('https://van-life-sever.onrender.com/check', values)
                 .then((response) => {
                     console.log(response.data);
                     navigate('/dashboard');

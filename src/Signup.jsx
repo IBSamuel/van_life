@@ -23,7 +23,7 @@ const Signup = () => {
             setnewArray(updatedArray);
             localStorage.setItem('accountDetails', JSON.stringify(updatedArray)); 
             
-            axios.post('http://van-life-sever.onrender.com/user', values)
+            axios.post('https://van-life-sever.onrender.com/user', values)
                 .then((response) => {
                     setnewArray(response.data);
                     console.log(response.values);
