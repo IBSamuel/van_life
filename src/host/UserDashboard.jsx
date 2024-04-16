@@ -8,7 +8,7 @@ const UserDashboard = () => {
     const [showAll, setShowAll] = useState(false);
 
     useEffect(() => {
-        const fechedData = JSON.parse(localStorage.getItem('allVans'));
+        const fechedData = JSON.parse(localStorage.getItem('allVans') || null);
         setVans(fechedData);
     }, []);
 
